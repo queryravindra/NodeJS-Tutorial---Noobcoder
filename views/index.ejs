@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJs Template</title>
+</head>
+<body>
+    <div class="col-lg-4">
+        <h1>You Searched For : <%= data.userQuery %> </h1>
+        <% if(data.loggedIn){ %> 
+            <h2> You are logg in as : <%= data.username %> </h2>
+        <% } %>
+        <ul>
+            <!-- <li><%= data.searchResults[0] %></li>
+            <li><%= data.searchResults[1] %></li>
+            <li><%= data.searchResults[3] %></li> -->
+            <% data.searchResults.forEach(result => { %>
+                <li> <%= results %> </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>
